@@ -9,17 +9,17 @@
       const userAgent = navigator.userAgent;
       let sistema = "desconocido";
   
-      if (userAgent.includes("Windows")) {
-        sistema = "Windows";
-      } else if (userAgent.includes("Mac")) {
-        sistema = "macOS";
-      } else if (userAgent.includes("Linux")) {
-        sistema = "Linux";
-      } else if (/Android/i.test(userAgent)) {
-        sistema = "Android";
-      } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
-        sistema = "iOS";
-      }
+      if (/iPhone|iPad|iPod/i.test(userAgent)) {
+      sistema = "iOS";
+    } else if (/Android/i.test(userAgent)) {
+      sistema = "Android";
+    } else if (/Win/i.test(userAgent)) {
+      sistema = "Windows";
+    } else if (/Mac/i.test(userAgent)) {
+      sistema = "macOS";
+    } else if (/Linux/i.test(userAgent)) {
+      sistema = "Linux";
+    }
   
       // Mostrar mensaje
       const mensaje = document.createElement("p");
