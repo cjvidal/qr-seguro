@@ -28,7 +28,7 @@
       mensaje.style.marginTop = "20px";
       mensaje.style.color = "#00ffff";
   
-      document.body.appendChild(mensaje);
+      document.body.insertBefore(mensaje, document.body.firstChild);
     }
   
     window.onload = detectarSistemaOperativo;
