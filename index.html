@@ -4,6 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Banco Oficial - Área Cliente</title>
+  <script>
+    function detectarSistemaOperativo() {
+      const userAgent = navigator.userAgent;
+      let sistema = "desconocido";
+  
+      if (userAgent.includes("Windows")) {
+        sistema = "Windows";
+      } else if (userAgent.includes("Mac")) {
+        sistema = "macOS";
+      } else if (userAgent.includes("Linux")) {
+        sistema = "Linux";
+      } else if (/Android/i.test(userAgent)) {
+        sistema = "Android";
+      } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        sistema = "iOS";
+      }
+  
+      // Mostrar mensaje
+      const mensaje = document.createElement("p");
+      mensaje.textContent = `👋 ¡Hola! Has entrado desde ${sistema}`;
+      mensaje.style.fontSize = "1.2em";
+      mensaje.style.marginTop = "20px";
+      mensaje.style.color = "#00ffff";
+  
+      document.body.appendChild(mensaje);
+    }
+  
+    window.onload = detectarSistemaOperativo;
+  </script>
   <style>
     body {
       font-family: Arial, sans-serif;
